@@ -1,2 +1,15 @@
-# umi-h5
-基于umi3 + antd-mobile h5
+# umi project
+
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```
