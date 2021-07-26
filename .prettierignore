@@ -8,17 +8,9 @@ package.json
 .umi-test
 node_modules
 dist/*
-app.json
-package.json
 package-lock.json
 yarn.lock
 tsconfig.json
-project.config.json
-.editorconfig
-.eslintignore
-.gitignore
-.prettierignore
 public/**
 *.md
-.eslintrc.js
 .vscode

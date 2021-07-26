@@ -27,7 +27,5 @@ export default (config: any) => {
   //   },
   // ]);
   // //js的修改 输入的时候文件名添加版本号
-  config.output.filename(
-    `[name]_${process.env.VERSION_CODE}.[contenthash:8].js`,
-  );
+  config.output.filename(`[name]_${process.env.VERSION_CODE}.[contenthash:8].js`);
 };

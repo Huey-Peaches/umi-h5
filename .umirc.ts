@@ -11,7 +11,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  routes:Routes,
+  routes: Routes,
   fastRefresh: {},
   mfsu: {},
   define: {
@@ -25,9 +25,7 @@ export default defineConfig({
     open: true,
   },
   hash: true,
-  styles: [
-    './node_modules/antd-mobile/dist/antd-mobile.css'
-  ],
+  styles: ['./node_modules/antd-mobile/dist/antd-mobile.css'],
   // chainWebpack: WebpackPlugin,
   analyze: {
     analyzerMode: 'server',
@@ -38,5 +36,5 @@ export default defineConfig({
     statsFilename: 'stats.json',
     logLevel: 'info',
     defaultSizes: 'parsed', // stat  // gzip
-  }
+  },
 });

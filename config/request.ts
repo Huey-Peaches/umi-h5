@@ -19,7 +19,6 @@ request.interceptors.response.use(async (response) => {
   return response;
 });
 
-
 // 处理请求头
 request.interceptors.request.use((url, options) => {
   const headers = {
