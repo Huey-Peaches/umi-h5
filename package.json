@@ -10,14 +10,23 @@
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "check-prettier lint",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
     "*.{js,jsx,less,md,json}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ],
     "*.ts?(x)": [
       "prettier --parser=typescript --write"
@@ -31,12 +40,14 @@
     "react": "17.x",
     "react-dom": "17.x",
     "react-image-crop": "^8.6.12",
-    "umi": "^3.5.13",
+    "stylelint": "^13.13.1",
+    "umi": "3.5.13",
     "weixin-js-sdk-ts": "^1.6.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@umijs/fabric": "^2.6.2",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.5.13",
     "lint-staged": "^10.0.7",
