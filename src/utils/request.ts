@@ -2,7 +2,7 @@
  * @Author: KeMull
  * @Date: 2021-07-23 16:54:46
  * @LastEditors: KeMull
- * @LastEditTime: 2021-07-23 17:07:31
+ * @LastEditTime: 2021-07-28 17:26:48
  */
 import { extend } from 'umi-request';
 import Env from './env';
@@ -29,8 +29,8 @@ request.interceptors.request.use((url, options) => {
     // devicecode,
   };
   return {
-    url: `${url}&interceptors=yes`,
-    options: { ...options, headers, interceptors: true },
+    url: `${url}`,
+    options: { ...options, headers },
   };
 });
 export default request;
