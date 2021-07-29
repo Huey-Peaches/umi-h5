@@ -2,7 +2,7 @@
  * @Author: KeMull
  * @Date: 2021-07-28 16:18:46
  * @LastEditors: KeMull
- * @LastEditTime: 2021-07-28 17:57:59
+ * @LastEditTime: 2021-07-29 20:29:33
  */
 import { useEffect } from 'react';
 import { Button } from 'antd-mobile';
@@ -31,6 +31,11 @@ const HomePage = (props: HomePageProps) => {
   const toHome = () => {
     history.push('/home');
   };
+  console.log(
+    '%c 🍜 props: ',
+    'font-size:20px;background-color: #465975;color:#fff;',
+    props.HomeModel.data.list,
+  );
 
   return (
     <div>
